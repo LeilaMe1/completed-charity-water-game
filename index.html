@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charity Water Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<!--<h1>Welcome to the Charity Water Game Prototype</h1>-->
+	<p id="progressText">progress: 0%</p>
+    
+
+	<div id="startWindow">
+		<button id="startButton">Start</button>
+
+	</div>
+
+	<div id="gameWindow">
+		<div id="images"> 
+			<img src="img/water.png" alt="circle water drop" id="water">
+			<img src="img/ice.png" alt="square ice cube" id="ice">
+			<img src="img/icefence.png" alt="square ice cube hitting fence" id="icefence">
+			<img src="img/iceblock.png" alt="square ice cube hitting block" id="iceblock">
+			<img src="img/iceholes.png" alt="square ice cube going over holes" id="iceholes">
+			<img src="img/waterfence.png" alt="water drop going through fence" id="waterfence">
+			<img src="img/waterblock.png" alt="water drop going under block" id="waterblock">
+			<img src="img/waterholes.png" alt="water drop falling through holes" id="waterholes">
+			<ul id="imagesList">
+			</ul>
+		</div>
+		<button id="switchButton">Freeze</button>
+	</div>
+
+	<div id="gameOverWindow">
+		<p id="pointsDisplay">Points:</p>
+		<button id="restartButton">Restart</button>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>

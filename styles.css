@@ -1,0 +1,32 @@
+/* Charity: water Brand Colors
+
+Primary Colors:
+- Yellow:     #FFC907
+- Blue:       #2E9DF7
+
+Secondary Colors:
+- Light Blue: #8BD1CB
+- Green:      #4FCB53
+- Orange:     #FF902A
+- Red:        #F5402C
+- Dark Green: #159A48
+- Pink:       #F16061
+
+*/
+
+img {
+	width: 64px;
+	height: 64px;
+}
+
+
+#gameWindow, #gameOverWindow {
+	display: none;
+}
+
+#imagesList, #images {
+	list-style-type: none;
+	display: flex;
+	padding-inline-start: 0;
+	align-items: center;
+}
