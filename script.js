@@ -12,6 +12,7 @@ let isLiquid = true;
 
 const imagesList = document.getElementById("imagesList");
 const obstacles = ["block", "holes", "fence", "none"];
+const hardObstacles = ["block", "holes", "fence"];
 let currentObstacle = "none";
 const imagesDiv = document.getElementById("images");
 
@@ -23,7 +24,18 @@ let progressInterval;
 
 const restartButton = document.getElementById("restartButton");
 
+const easyDifficulty = document.getElementById("easy");
+const hardDifficulty = document.getElementById("hard");
+
 function beginProgress() {
+	let speed = 0;
+	if (easyDifficulty.checked === true) {
+		speed = 1000; // 1 second
+	}
+	else {
+		// hard difficulty
+		speed = 700;
+	}
 	//const progressInterval = setInterval(function() {
 	progressInterval = setInterval(function() {
 		progressPercentage++;
@@ -49,7 +61,7 @@ function beginProgress() {
 		// check collision
 		doCollision();
 
-	}, 1000); // 1 second
+	}, speed);
 	progressText.textContent = "progress: 0%";
 }
 
@@ -113,7 +125,14 @@ switchButton.addEventListener('click', freezeOrMelt);
 function newObstacle() {
 	const newListItem = document.createElement("li");
 	const newObstacle = document.createElement("img");
-	name = obstacles[Math.floor(Math.random() * obstacles.length)];
+	if (easyDifficulty.checked === true) {
+		name = obstacles[Math.floor(Math.random() * obstacles.length)];
+	}
+	else {
+		// hard difficulty
+		name = hardObstacles[Math.floor(Math.random() * hardObstacles.length)];
+	}
+	//name = obstacles[Math.floor(Math.random() * obstacles.length)];
 	newObstacle.src = "img/" + name + ".png";
 	newObstacle.name = name;
 	newListItem.appendChild(newObstacle);
