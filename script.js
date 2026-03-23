@@ -32,6 +32,7 @@ const progressBar = document.getElementById("progressBar");
 let numObstacles = 7;
 
 const gameOverMessage = document.getElementById("gameOverMessage");
+const gameOverImage = document.getElementById("gameOverImage");
 
 function beginProgress() {
 	let speed = 0;
@@ -55,6 +56,7 @@ function beginProgress() {
 			progressText.textContent = "progress: 100%";
 			pointsDisplay.textContent = "Points: " + progressPercentage * 10;
 			gameOverMessage.textContent = "Complete";
+			gameOverImage.style.display = "block";
 			reset();
 		}
 
@@ -280,6 +282,7 @@ function gameOver() {
 	//gameOverWindow.style.display = "block";
 	pointsDisplay.textContent = "Points: " + progressPercentage * 10;
 	gameOverMessage.textContent = "game over";
+	gameOverImage.style.display = "none";
 
 	gameOverReset();
 }
