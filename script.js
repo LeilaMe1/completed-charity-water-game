@@ -99,7 +99,7 @@ function reset() {
 	switchButton.textContent = "Freeze";
 	//startWindow.style.display = "block";
 	startWindow.style.display = "none";
-	gameOverWindow.style.display = "block";
+	gameOverWindow.style.display = "flex";
 	gameWindow.style.display = "none";
 	currentIndex = 0;
 	switchButton.style.display = "block";

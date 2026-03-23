@@ -33,6 +33,15 @@ img {
 	border-color: #2E9DF7;
 	border-radius: 10px;
 	margin: 20px calc(50% - 250px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+#gameOverWindow {
+	gap: 10px;
+	flex-direction: column;
 }
 
 
@@ -44,6 +53,8 @@ img {
 	border-color: #FFC907;
 	border-radius: 10px;
 	margin: 20px calc(50% - 250px);
+	justify-content: center;
+	align-items: center;
 }
 
 #imagesList, #images {
@@ -86,7 +97,7 @@ footer {
 
 #footerImage {
 	height: auto;
-	width: auto;
+	width: calc(500px - 10px * 2 - 5px * 2);
 }
 
 #switchButton {
@@ -105,13 +116,14 @@ footer {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 500px) {
 	#footerImage {
 		width: 300px;
 	}
 
 	#startWindow, #gameWindow, #gameOverWindow {
 		width: 100%;
+		max-width: 500px;
 		height: 300px;
 		border: 2px solid;
 		border-color: #2E9DF7;
