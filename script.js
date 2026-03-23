@@ -29,6 +29,8 @@ const hardDifficulty = document.getElementById("hard");
 
 const progressBar = document.getElementById("progressBar");
 
+let numObstacles = 7;
+
 function beginProgress() {
 	let speed = 0;
 	if (easyDifficulty.checked === true) {
@@ -53,12 +55,15 @@ function beginProgress() {
 			reset();
 		}
 
-		// do obstacle things
-		if ((progressPercentage % 2) != 0) {
-			newObstacle();
-		}
-		else {
-			addNoneObstacle();
+		// check if not at the end
+		if (progressPercentage <= 100 - numObstacles) {
+			// do obstacle things
+			if ((progressPercentage % 2) != 0) {
+				newObstacle();
+			}
+			else {
+				addNoneObstacle();
+			}
 		}
 		removeObstacle();
 
@@ -82,7 +87,7 @@ function start() {
 	water.style.display = "block";
 	// clear list
 	imagesList.innerHTML = "";
-	for (let i = 0; i < 7; i++) {
+	for (let i = 0; i < numObstacles; i++) {
 		addNoneObstacle();
 	}
 }
