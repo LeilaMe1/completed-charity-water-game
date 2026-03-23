@@ -59,7 +59,19 @@ function beginProgress() {
 		if (progressPercentage <= 100 - numObstacles) {
 			// do obstacle things
 			if ((progressPercentage % 2) != 0) {
-				newObstacle();
+				// check if last
+				if (progressPercentage === 100 - numObstacles) {
+					const newListItem = document.createElement("li");
+					const newObstacle = document.createElement("img");
+					newObstacle.src = "img/water-can-transparent.png";
+					newObstacle.name = "water-can";
+					newListItem.appendChild(newObstacle);
+					imagesList.appendChild(newListItem);
+					allObstacles.push("water-can");
+				}
+				else {
+					newObstacle();
+				}
 			}
 			else {
 				addNoneObstacle();
