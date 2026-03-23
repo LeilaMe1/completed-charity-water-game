@@ -16,6 +16,7 @@ Secondary Colors:
 
 body {
 	margin: 0;
+	font-family: Proxima Nova, sans-serif;
 }
 
 
@@ -86,6 +87,10 @@ img {
   transition: width 0.2s ease;
 }
 
+#progressText {
+	justify-self: center;
+}
+
 footer {
 	background-color: white;
 	padding: 20px 10px;
@@ -106,6 +111,14 @@ footer {
 	border-radius: 50px;
 	padding: 10px;
 	margin: calc(300px - calc((500px) / 8) - 140px) calc(100% - 100px - 4px) 10px;
+
+	background-color: #2E9DF7;
+	color: white;
+	transition-duration: 0.2s;
+}
+
+#switchButton:hover {
+	background-color: #F16061;
 }
 
 #startButton, #restartButton {
