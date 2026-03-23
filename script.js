@@ -66,7 +66,7 @@ function start() {
 	water.style.display = "block";
 	// clear list
 	imagesList.innerHTML = "";
-	for (let i = 0; i < 10; i++) {
+	for (let i = 0; i < 7; i++) {
 		addNoneObstacle();
 	}
 }
