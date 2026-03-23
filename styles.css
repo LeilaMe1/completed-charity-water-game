@@ -19,9 +19,24 @@ img {
 	height: 64px;
 }
 
+#startWindow {
+	width: 500px;
+	height: 300px;
+	border: 5px solid;
+	border-color: #2E9DF7;
+	border-radius: 10px;
+	margin: 20px calc(50% - 250px);
+}
+
 
 #gameWindow, #gameOverWindow {
 	display: none;
+	width: 500px;
+	height: 300px;
+	border: 5px solid;
+	border-color: #FFC907;
+	border-radius: 10px;
+	margin: 20px calc(50% - 250px);
 }
 
 #imagesList, #images {
