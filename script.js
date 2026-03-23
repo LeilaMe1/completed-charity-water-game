@@ -27,6 +27,8 @@ const restartButton = document.getElementById("restartButton");
 const easyDifficulty = document.getElementById("easy");
 const hardDifficulty = document.getElementById("hard");
 
+const progressBar = document.getElementById("progressBar");
+
 function beginProgress() {
 	let speed = 0;
 	if (easyDifficulty.checked === true) {
@@ -40,6 +42,8 @@ function beginProgress() {
 	progressInterval = setInterval(function() {
 		progressPercentage++;
 		progressText.textContent = "progress: " + progressPercentage + "%";
+		const percentage = progressPercentage + "%";
+		progressBar.style.width = percentage;
 
 		currentIndex++;
 		if (progressPercentage === 100) {
