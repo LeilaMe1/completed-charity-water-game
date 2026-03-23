@@ -34,10 +34,14 @@ img {
 	border-color: #2E9DF7;
 	border-radius: 10px;
 	margin: 20px calc(50% - 250px);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 10px;
+}
+
+#startWindow h1, #startWindow h2, #startWindow div {
+	justify-self: center; 
+}
+
+#startWindow button {
+	margin-left: calc(50% - 40px);
 }
 
 #gameOverWindow {
@@ -121,11 +125,13 @@ footer {
 	background-color: #F16061;
 }
 
-#startButton, #restartButton {
+#startButton, #restartButton, #howButton {
 	height: 40px;
 	width: 80px;
 	padding: 5px;
 	text-align: center;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
 
