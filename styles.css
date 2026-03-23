@@ -14,9 +14,16 @@ Secondary Colors:
 
 */
 
+body {
+	margin: 0;
+}
+
+
 img {
-	width: 62px;
-	height: 62px;
+	/*width: 62px;*/
+	width: calc((500px) / 8);
+	/*height: 62px;*/
+	height: calc((500px) / 8);
 }
 
 #startWindow {
@@ -64,7 +71,80 @@ img {
   width: 0%;
   height: 100%;
   background-color: #2E9DF7;
-  /*background-image: linear-gradient(90deg, #0071c5, #00aeef);*/
   border-radius: 10px;
   transition: width 0.2s ease;
+}
+
+footer {
+	background-color: white;
+	padding: 20px 10px;
+	border: 5px solid;
+	border-color: #FFC907;
+	border-radius: 10px;
+	text-align: center;
+}
+
+#footerImage {
+	height: auto;
+	width: auto;
+}
+
+#switchButton {
+	height: 100px;
+	width: 100px;
+	border-radius: 50px;
+	padding: 10px;
+	margin: calc(300px - calc((500px) / 8) - 140px) calc(100% - 100px - 4px) 10px;
+}
+
+#startButton, #restartButton {
+	height: 40px;
+	width: 80px;
+	padding: 5px;
+	text-align: center;
+}
+
+
+@media (max-width: 768px) {
+	#footerImage {
+		width: 300px;
+	}
+
+	#startWindow, #gameWindow, #gameOverWindow {
+		width: 100%;
+		height: 300px;
+		border: 2px solid;
+		border-color: #2E9DF7;
+		margin: 2px calc(50% - 50vw - 4px);
+	}
+
+	#gameWindow, #gameOverWindow {
+		border-color: #FFC907;
+	}
+
+	img {
+		width: calc((100vw) / 8);
+		height: calc((100vw) / 8);
+	}
+
+	#startButton, #restartButton {
+		height: 40px;
+		width: 80px;
+		padding: 5px;
+		text-align: center;
+	}
+
+	#switchButton {
+		height: 100px;
+		width: 100px;
+		border-radius: 50px;
+		padding: 10px;
+		margin: calc(300px - ((100vw) / 8) - 140px) calc(100% - 100px - 4px) 10px;
+	}
+}
+
+@media (max-width: 330px) {
+	#footerImage {
+		width: 100%;
+	}
 }
