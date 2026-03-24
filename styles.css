@@ -67,6 +67,7 @@ img {
 	display: flex;
 	padding-inline-start: 0;
 	align-items: center;
+	overflow: hidden;
 }
 
 

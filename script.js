@@ -87,6 +87,8 @@ function beginProgress() {
 		// check collision
 		doCollision();
 
+		animateObstacles();
+
 	}, speed);
 	progressText.textContent = "progress: 0%";
 }
@@ -275,6 +277,9 @@ function clearCharacter() {
 	waterfence.style.display = "none";
 	iceblock.style.display = "none";
 	waterblock.style.display = "none";
+	//water0.style.display = "none";
+	//water1.style.display = "none";
+	//water2.style.display = "none";
 }
 
 function gameOver() {
@@ -293,4 +298,36 @@ function gameOver() {
 		allObstacles.push("none");
 	}
 }**/
+
+/**const frames = [water0, water1, water2];
+
+function animateDrop() {
+	let frame = 0
+	animationInterval = setInterval(function() {
+		if (frame === 100) {
+			clearInterval(animationInterval);
+		}
+		clearCharacter();
+		frames[frame % frames.length].style.display = "block";
+		frame++;
+	}, 10);
+}**/
+
+function animateObstacles() {
+	let imgWidth = 0;
+	if (screen.width > 500) {
+		imgWidth = 500/8;
+	}
+	else {
+		imgWidth = screen.width / 8;
+	}
+	let obstacles = imagesList.getElementsByTagName("li");
+	for (let i = 0; i < obstacles.length; i++) {
+	//for (let i = 0; i < obstacles.length - 1; i++) { // don't animate last one
+		var obstacle = obstacles[i];
+		obstacle.animate({ transform: `translateX(${imgWidth}px)`, offset: 0 }, 1000);
+	}
+
+}
+
 restartButton.addEventListener('click', start);
