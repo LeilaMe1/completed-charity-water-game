@@ -34,6 +34,9 @@ let numObstacles = 7;
 const gameOverMessage = document.getElementById("gameOverMessage");
 const gameOverImage = document.getElementById("gameOverImage");
 
+const howButton = document.getElementById("howButton");
+const backButton = document.getElementById("backButton");
+
 function beginProgress() {
 	let speed = 0;
 	if (easyDifficulty.checked === true) {
@@ -115,7 +118,8 @@ function reset() {
 	progressPercentage = 0;
 	isLiquid = true;
 	currentObstacle = "none";
-	switchButton.textContent = "Freeze";
+	//switchButton.textContent = "Freeze";
+	switchButton.innerHTML = '<span class="material-symbols-outlined">snowflake</span>';
 	//startWindow.style.display = "block";
 	startWindow.style.display = "none";
 	gameOverWindow.style.display = "flex";
@@ -323,7 +327,6 @@ function animateObstacles() {
 	}
 	let obstacles = imagesList.getElementsByTagName("li");
 	for (let i = 0; i < obstacles.length; i++) {
-	//for (let i = 0; i < obstacles.length - 1; i++) { // don't animate last one
 		var obstacle = obstacles[i];
 		obstacle.animate({ transform: `translateX(${imgWidth}px)`, offset: 0 }, 1000);
 	}
@@ -331,3 +334,13 @@ function animateObstacles() {
 }
 
 restartButton.addEventListener('click', start);
+
+howButton.addEventListener('click', function() {
+	startWindow.style.display = "none";
+	howWindow.style.display = "flex";
+});
+
+backButton.addEventListener('click', function() {
+	howWindow.style.display = "none";
+	startWindow.style.display = "block";
+});

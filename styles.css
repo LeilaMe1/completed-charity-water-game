@@ -40,7 +40,7 @@ img {
 	justify-self: center; 
 }
 
-#startWindow button {
+#startWindow button, #howWindow button {
 	margin-left: calc(50% - 40px);
 }
 
@@ -68,6 +68,24 @@ img {
 	padding-inline-start: 0;
 	align-items: center;
 	overflow: hidden;
+}
+
+#howWindow {
+	width: 500px;
+	height: 300px;
+	border: 5px solid;
+	border-color: #2E9DF7;
+	border-radius: 10px;
+	margin: 20px calc(50% - 250px);
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#how_to {
+	height: calc(300px - 40px);
+	width: auto;
 }
 
 
